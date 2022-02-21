@@ -10,6 +10,7 @@ const routes = [
     {
         path: '/destination/:id/:slug',
         name: 'destination.page',
+        props: route => ({id: parseInt(route.params.id)}),
         component: () => import('@/views/DestinationPage.vue')
     },
 ]
